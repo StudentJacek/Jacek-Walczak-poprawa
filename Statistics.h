@@ -1,28 +1,54 @@
 #ifndef STATISTICS_H
 #define STATISTICS_H
 
+/**
+ * @brief Klasa reprezentująca statystyki.
+ */
 class Statistics
 {
     public:
-        //konstruktor domyślny
+        /**
+         * @brief Konstruktor domyślny.
+         */
         Statistics();
 
-        //konstruktor kopiujący
+        /**
+         * @brief Konstruktor kopiujący.
+         * @param other Inne statystyki, które chcemy skopiować.
+         */
         Statistics(const Statistics& other);
 
-        //destruktor
+        /**
+         * @brief Destruktor.
+         */
         ~Statistics();
 
-        //funkcje dostępu do składowych
+        /**
+         * @brief Zwraca wartość danych statystyk.
+         * @return Wartość danych statystyk.
+         */
         int getData();
+
+        /**
+         * @brief Ustawia nową wartość danych statystyk.
+         * @param newData Nowa wartość danych statystyk.
+         */
         void setData(int newData);
 
-        //funkcje obliczeniowe
+        /**
+         * @brief Oblicza średnią wartość danych statystyk.
+         * @return Średnia wartość danych statystyk.
+         */
         int calculateMean();
+
+        /**
+         * @brief Oblicza odchylenie standardowe danych statystyk.
+         * @return Odchylenie standardowe danych statystyk.
+         */
         int calculateStandardDeviation();
 
     private:
-        int data;
+        int data; /**< Dane statystyk. */
 };
 
 #endif // STATISTICS_H
